@@ -13,7 +13,7 @@
 #include <DNSServer.h>            // page web lora
 #include <ESPAsyncWebServer.h>    // page web lora
 #include <LiquidCrystal_I2C.h>    // Bibliothèque de gestion de l'écran LCD
-#include <Adafruit_Sensor.h>    // Bibliothèques pour gérer la sonde de température DHT22
+#include <Adafruit_Sensor.h>      // Bibliothèques pour gérer la sonde de température DHT22
 #include <DHT.h>
 #include <DHT_U.h>
 
