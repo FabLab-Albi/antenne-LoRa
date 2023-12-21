@@ -1,0 +1,132 @@
+<html lang="fr-FR">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="refresh" content="180" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="monstyle.css" />
+    <title>Ma station LoRa</title>
+    <script>
+      if (!!window.EventSource) {
+        var source = new EventSource("/events");
+        source.addEventListener(
+          "open",
+          function (e) {
+            console.log("Events Connected");
+          },
+          false
+        );
+        source.addEventListener(
+          "error",
+          function (e) {
+            if (e.target.readyState != EventSource.OPEN) {
+              console.log("Events Disconnected");
+            }
+          },
+          false
+        );
+        source.addEventListener(
+          "texteMessage",
+          function (e) {
+            console.log("message", e.data);
+            document.getElementById("id_message").innerHTML = e.data;
+          },
+          false
+        );
+        source.addEventListener(
+          "temperature",
+          function (e) {
+            console.log("temperature", e.data);
+            document.getElementById("id_temperature").innerHTML = e.data;
+          },
+          false
+        );
+        
+        source.addEventListener(
+          "airHumidity",
+          function (e) {
+            console.log("airhumidity", e.data);
+            document.getElementById("id_airHumidity").innerHTML = e.data;
+          },
+          false
+        );
+
+        source.addEventListener(
+          "soilHumidity",
+          function (e) {
+            console.log("soilHumidity", e.data);
+            document.getElementById("id_soilHumidity").innerHTML = e.data;
+          },
+          false
+        );
+
+        source.addEventListener(
+          "identifiant",
+          function (e) {
+            console.log("identifiant", e.data);
+            document.getElementById("id_identifiant").innerHTML = e.data;
+          },
+          false
+        );
+
+        source.addEventListener(
+          "info",
+          function (e) {
+            console.log("info", e.data);
+            document.getElementById("id_message").innerHTML = e.data;
+          },
+          false
+        );
+
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        Ma station LoRa <br />
+        <br />
+        &nbsp;&nbsp;&nbsp;
+        <img
+          src="lora.png"
+          alt="LoRa"
+          style="width: 40%; margin-left: 70%; margin-top: -25%"
+        />
+      </h1>
+      <br />
+      <br />
+      <br />
+    </header>
+
+    <br />
+    <details>
+      <summary>Paramètres de la station LoRa</summary>
+
+      <ul>
+        <li>Numéro info :  <span id="id_identifiant"> NC</span>&nbsp;</li>
+        <li>Température de l'air : <span id="id_temperature"> NC</span>&nbsp;°C</li>
+        <li>Humidité de l'air   : <span id="id_airHumidity"> NC</span>&nbsp;%</li>
+        <li>Humidité du sol    : <span id="id_soilHumidity"> NC </span> &nbsp;%</li>
+      </ul>
+    </details>
+    <br />
+
+    <details>
+      <summary>Commande en ligne</summary>
+      <form action="/COMMANDE" method="POST">
+        &nbsp;&nbsp;<input
+          id="textcommmande"
+          name="text_commande"
+          style="width: 75%; height: 4vw; font-size: 3vw"
+          type="text"
+        />&nbsp; &nbsp; &nbsp;
+        <input value="Envoyer" style="font-size: 3vw" type="submit" />
+      </form>
+    </details>
+    <h3>MESSAGES :&nbsp;</h3>
+    <span id="id_message" class="message"> </span>
+    <p><br /></p>
+    <p><br /></p>
+    <p></p>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+
+
+header{
+    background-color: rgb(255, 255, 255);
+    padding: 10%;
+    text-align: left;   
+}
+
+body{
+    padding-left: 1vw;
+    background-color: rgb(241, 236, 221);
+    font-family: Arial, Helvetica, Sans-Serif;
+    color: #444444;
+    font-size:2vw;
+}
+h1{
+    height: 47px;
+    color: #92743d;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+h3{
+    font-family:Arial, Helvetica, sans-serif;
+    color:rgb(58, 53, 53);
+    font-size: 4vw;
+    height: 3vw;
+    padding: 2%;
+    
+}
+summary{
+    color:rgb(92, 100, 46);
+    
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:5vw;
+    border: 2px;
+    border-color: black;
+    
+}
+details{
+    color:rgb(58, 40, 23);
+    font-size:3vw;
+    border: 2px;
+    border-color: rgb(110, 73, 4);
+    border-width: 2px;
+    border-style:solid;
+    border-radius: 5px;
+  
+}
+.message{
+    color:rgb(187, 101, 20);
+    font-size: 3vw;
+}
+
+.id_liste_reseaux{
+    color:rgb(31, 20, 187);
+}
