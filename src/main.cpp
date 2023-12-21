@@ -8,15 +8,12 @@
 //****************************************************************************************************************
 // Liste des bibliothèques
 #include <WiFi.h>
-#include <LittleFS.h> // gestion des 4Mo de stockage de l'ESP
-#include <LoRa_E32.h>
-#include <DNSServer.h> // page web lora
-// #include <TFT_eSPI.h>          // gestion de l'ecran du recepteur
-#include <ESPAsyncWebServer.h> // page web lora
-
-#include <LiquidCrystal_I2C.h>
-
-#include <Adafruit_Sensor.h> // Bibliothèques pour gérer la sonde de température DHT22
+#include <LittleFS.h>             // Bibliothèque pour la gestion des 4Mo de stockage de l'ESP
+#include <LoRa_E32.h>             // Bibliothèque  de gestion de l'antenne LoRa E32
+#include <DNSServer.h>            // page web lora
+#include <ESPAsyncWebServer.h>    // page web lora
+#include <LiquidCrystal_I2C.h>    // Bibliothèque de gestion de l'écran LCD
+#include <Adafruit_Sensor.h>    // Bibliothèques pour gérer la sonde de température DHT22
 #include <DHT.h>
 #include <DHT_U.h>
 
