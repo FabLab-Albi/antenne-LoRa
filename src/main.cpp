@@ -28,8 +28,8 @@ DHT_Unified dht(DHTPIN, DHTTYPE);
 
 //****************************************************************************************************************
 // Id de connexion WiFi inutile ici
-const char *ssid = "dfvdef"; //"devolo-30d32d310fc9"; // id de la connexion WiFi
-const char *password = "HRAMNGBUZOKAFWLG";
+const char *ssid = "dfvdef"; // id de la connexion WiFi
+const char *password = "HRFWLG";
 
 //****************************************************************************************************************
 // intances pour le AJAX
